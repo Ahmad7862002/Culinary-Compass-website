@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/restaurant.png">
+  <script src="script.js"></script>
+</head>
+<body>
+
+ 
+ 
+  <div class="signup_container">
+    <button class="buttoner"  onclick="regenerateImages()">Regenerate icons!</button>
+    <div class="confirmation_center signup_center ">
+      <h1 style="margin-top: 20px;">Register</h1>
+      <form method="POST" action="">
+        <div class="txt_field">
+          <label id="passworderror" style="padding-bottom: 75px; color: red; visibility: hidden;">Passwords must be the same</label>
+          <input type="text" id="name" name="name" oninput="checkInputValue(this)" required>
+          <span></span>
+          <label class="input-label" style="color:black; opacity:0.8;">Name</label>
+        </div>
+        <div class="txt_field">
+          <input type="email" id="email" name="email" oninput="checkInputValue(this)" required>
+          <span></span>
+          <label class="input-label">Email</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="password" name="password" oninput="checkInputValue(this)" required>
+          <span></span>
+          <label class="input-label">Password</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="confirmpassword" oninput="pass(this)" name="cpassword" required>
+          <span></span>
+          <label class="input-label">Confirm Password</label>
+        </div>
+        <input id="signupbutton" name="submit" type="button" onclick="handleSignUp()" value="Sign Up">
+        <div class="question_link">
+          Already have an account? <a href="login.html">Login Here</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
